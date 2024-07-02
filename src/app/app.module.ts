@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     ContactComponent,
     ProductDetailComponent,
-    FormsModule, // paraformularios de tipo plantilla
-    ReactiveFormsModule // formularios de tipo reactivo
+  
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, // paraformularios de tipo plantilla
+    ReactiveFormsModule // formularios de tipo reactivo/  
   ],
   providers: [],
   bootstrap: [AppComponent]
