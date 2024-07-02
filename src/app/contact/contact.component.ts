@@ -16,15 +16,14 @@ export class ContactComponent implements OnInit {
   //   name: 'Salvador',
   //   lastName: 'De la Tijera',
   //   dni: '123456789'
-    
   // }
+  mostrarDni: boolean = false;
 
   constructor ( private form: FormBuilder){
     this.formularioContacto = this.form.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       lastName: ['',],
       tipoDni: [''],
-      dni: '',
       email: ['', [Validators.required, Validators.email]]
       
     })
@@ -33,7 +32,8 @@ export class ContactComponent implements OnInit {
 ngOnInit():void{ 
 
   this.formularioContacto.get('tipoDni')?.valueChanges.subscribe(value =>{
-    this.tipoDni = value
+    this.mostrarDni = value !='';
+    this.tipoDni = value;
   })
 
   // this.formularioContacto.valueChanges.subscribe(valor =>{

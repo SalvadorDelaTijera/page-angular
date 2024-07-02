@@ -37,14 +37,15 @@
 
  
     <div class class="mb-3">
-      <label for="tipoDni" class="form-label">{{tipoDni}}</label>
+      <dni-input [tipoDni]="tipoDni"/>
+      <!-- <label for="tipoDni" class="form-label">{{tipoDni}}</label>
       <input [ngClass]="{'is-invalid': hasErrors('dni', 'required') || hasErrors('dni', 'minlength') }" 
       type="text" 
       class="form-control" 
       id="name" 
       formControlName="tipoDni">
       <div class="text-danger" *ngIf="hasErrors('dni', 'required')"> {{tipoDni}} requerido </div> 
-      <div class="text-danger" *ngIf="hasErrors('dni', 'minlength')"> {{tipoDni}} minimo 3 caracteres requeridos </div>
+      <div class="text-danger" *ngIf="hasErrors('dni', 'minlength')"> {{tipoDni}} minimo 3 caracteres requeridos </div> -->
     </div>
 
 

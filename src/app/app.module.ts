@@ -8,6 +8,8 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DniComponent } from './contact/dni/dni.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     ContactComponent,
     ProductDetailComponent,
+    DniComponent,
   
    
   ],
@@ -24,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // paraformularios de tipo plantilla
-    ReactiveFormsModule // formularios de tipo reactivo/  
+    ReactiveFormsModule ,// formularios de tipo reactivo/  
+    HttpClientModule //para hacer peticiones al http
   ],
   providers: [],
   bootstrap: [AppComponent]
